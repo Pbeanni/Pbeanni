@@ -1,0 +1,119 @@
+:root{
+    font-family: 'Inter', sans-serif;
+    --fontsize-1:30px;
+    --fontsize-2:50px;
+    --fontsize-3:70px;
+    --fontsize-4:90px;
+    --fontweight-normal:400;
+    --fontweight-big:800;
+    font-weight:var(--fontweight-normal);
+    box-sizing: border-box;
+    --color-blue:#0085FF;
+    --color-orange:#FF9E00;
+}
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background-color: #f1f1f1;
+}
+/*header*/
+.header-wrapp{
+    margin-top:15px;
+    background-color:hsla(0,0%,95%,.3);
+    position:fixed;
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height:20px;
+    padding:2px;
+    backdrop-filter: blur(2px);
+}
+.nav-menu{
+   
+
+}
+.menu-list{
+    font-weight: 500;
+    letter-spacing: 5px;
+    list-style: none;
+    display: flex;
+    gap:52px;
+    cursor: pointer;
+}
+.menu-list__items:hover{
+    color:var(--color-orange);
+}
+
+/*main grid*/
+.main-grid{
+    padding-top:80px;
+    display:grid;
+    grid-template-rows:calc(100vh - 140px) 100vh auto;
+}
+/*landing-section*/
+.landing-section{
+    gap:142px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.landing-section__heading-wrapp{
+display: flex;
+flex-direction:column ;
+}
+
+.landing-section__heading{
+    margin:0;
+    font-size: var(--fontsize-4);
+    font-weight: var(--fontweight-big);
+}
+.heading-style{
+    color:var(--color-blue);
+}
+.landing-section__text{
+    font-size:var(--fontsize-2);
+}
+.landing-section__square{
+    width:200px;
+    height:200px;
+    background-color: var(--color-orange);
+    aspect-ratio: 1/1;
+}
+.square-wrapp{
+    z-index: -100;
+    width:200px;
+    height:200px;
+    transform: rotate(45deg);
+    aspect-ratio: 1/1;
+    animation-name: spin;
+    animation-duration: 10000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; 
+}
+/*about section*/
+.about-section--style{
+    height: 60px;
+    background-color: var(--color-blue);
+}
+.about-section--style::after{
+    height:80px;
+    width:60px;
+    background-color: red;
+}
+
+
+/*teste*/
+
+
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
